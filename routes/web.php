@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test', 'App\Http\Controllers\test@test');
+Route::get('/user', 'App\Http\Controllers\User@index');
+Route::get('/user/about', 'App\Http\Controllers\User@about');
+Route::get('/admin', 'App\Http\Controllers\Admin@index');
+Route::get('/admin/about', 'App\Http\Controllers\Admin@about');
