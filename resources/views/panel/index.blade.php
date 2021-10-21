@@ -3,7 +3,7 @@
 @section('content')
 {{--pathBase--}}
     <div class="row flex-column align-items-center mb-5">
-    <h2>Панель адміна</h2>
+    <h2>Ваші пости</h2>
     <a class="btn btn-outline-info" href="/panel/edit">
         Створити новий пост
     </a>
@@ -17,7 +17,7 @@
                     <a class="panel-img" href="/panel/edit?id={{$post->id}}">
                         <img src="{{url("storage/$post->image")}}" alt="">
                     </a>
-                    <h3 class="small-title">{{$post->title}}</h3>
+                    <h3 class="small-title">{{$post->title}} - by {{$post->user->name}}</h3>
                     <a class="edit btn btn-secondary" href="/panel/edit?id={{$post->id}}">
                         Edit
                     </a>

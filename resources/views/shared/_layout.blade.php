@@ -20,8 +20,7 @@
             @yield('content')
         </div>
 
-        @include('partials.footer')
-
+        <script src="/lib/jquery/dist/jquery.js"></script>
         <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         @yield('scripts')
     </body>

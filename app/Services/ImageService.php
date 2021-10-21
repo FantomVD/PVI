@@ -13,6 +13,6 @@ class PostService
 
     public static function getPostById($id)
     {
-        return Post::query()->where('id', $id);
+        return Post::query()->with('user')->where('id', $id);
     }
 }

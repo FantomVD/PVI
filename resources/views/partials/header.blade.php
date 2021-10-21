@@ -11,15 +11,13 @@
 
 
                     @if (auth()->check())
-                        @if (auth()->user()->isAdmin)
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="{{url('panel/edit')}}">Зробити пост</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-dark"  href="{{url('panel')}}">Адмін-панель</a>
+                                <a class="nav-link text-dark"  href="{{url('panel')}}">Пости</a>
                             </li>
-                        @endif
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="{{url('logout')}}">Вийти</a>
                             </li>
@@ -27,14 +25,8 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="{{url('login')}}">Ввійти</a>
                             </li>
-
                         @endif
                     <li class="nav-item">
-                        <form action="{{url('')}}" method="get">
-                            <input type="hidden" name="pageNumber" value="{{$page ?? ''}}"/>
-                            <input class="search" type="text" name="search" placeholder="Пошук статті"/>
-                            <button class="submit-btn">Пошук</button>
-                        </form>
                     </li>
                 </ul>
             </div>

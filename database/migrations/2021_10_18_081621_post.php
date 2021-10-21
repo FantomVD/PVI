@@ -19,6 +19,8 @@ class Post extends Migration
             $table->string('body', 20000);
             $table->string('image');
             $table->timestamps();
+            $table->integer('category_id')->default(1);
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
 
 
